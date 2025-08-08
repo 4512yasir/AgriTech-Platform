@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Navbar from "./Components/Navbar";
-import Sidebar from "./Components/sidebar";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Login from "./Pages/Login";
@@ -50,7 +49,7 @@ export default function App() {
 
   return (
     <Router>
-      {isLoggedIn ? <Sidebar /> : <Navbar />}
+      <Navba/>
 
       <div className="p-4">
         <Routes>
