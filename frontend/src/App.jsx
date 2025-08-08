@@ -5,11 +5,6 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
-import FarmerDashboard from "./Pages/Dashboard/farmerdashboard";
-import AgentDashboard from "./Pages/Dashboard/agentdashboard";
-import BuyerDashboard from "./Pages/Dashboard/buyerdashboard";
-import AdminDashboard from "./Pages/Dashboard/AdminDashboard";
-import Products from "./Pages/products/product";
 import "./App.css";
 
 // Higher-order component to protect routes based on login and role
@@ -49,7 +44,7 @@ export default function App() {
 
   return (
     <Router>
-      <Navba/>
+      <Navbar/>
 
       <div className="p-4">
         <Routes>
@@ -62,49 +57,6 @@ export default function App() {
           />
           <Route path="/register" element={<Register />} />
 
-          {/* Role-Protected Dashboards */}
-          <Route
-            path="/dashboard/farmer"
-            element={
-              <ProtectedRoute allowedRole="farmer">
-                <FarmerDashboard />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/dashboard/agent"
-            element={
-              <ProtectedRoute allowedRole="agent">
-                <AgentDashboard />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/dashboard/buyer"
-            element={
-              <ProtectedRoute allowedRole="buyer">
-                <BuyerDashboard />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/dashboard/admin"
-            element={
-              <ProtectedRoute allowedRole="admin">
-                <AdminDashboard />
-              </ProtectedRoute>
-            }
-          />
-
-          {/* Products (any logged-in user) */}
-          <Route
-            path="/products"
-            element={
-              <ProtectedRoute>
-                <Products />
-              </ProtectedRoute>
-            }
-          />
         </Routes>
       </div>
     </Router>
