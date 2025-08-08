@@ -11,7 +11,12 @@ def create_app():
     db.init_app(app)
     CORS(app)
 
-    from .routes import register_routes
+    from .Routes import register_routes
     register_routes(app)
+
+    # ⚠️ TEMPORARY: Create all tables when app starts
+    with app.app_context():
+        db.create_all()
+        print("✅ Database tables created.")
 
     return app

@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from app.models import User
-from app.utils.auth import token_required, roles_required
+from app.utilis.auth import token_required, roles_required
 from app import db
 from flask_bcrypt import Bcrypt
 

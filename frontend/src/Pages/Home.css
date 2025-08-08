@@ -1,0 +1,142 @@
+/* Animated background */
+.home-container {
+    background: linear-gradient(-45deg, #e6ffe6, #ccffcc, #b3ffb3, #e6ffe6);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #2d2d2d;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero-content {
+    background-color: white;
+    padding: 40px;
+    margin: auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    color: #006400;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.hero-btn.primary {
+    background-color: #228B22;
+    color: white;
+}
+
+.hero-btn.primary:hover {
+    background-color: #1e7a1e;
+}
+
+.hero-btn.secondary {
+    background-color: white;
+    color: #228B22;
+    border: 2px solid #228B22;
+}
+
+.hero-btn.secondary:hover {
+    background-color: #f0fff0;
+}
+
+/* Features Section */
+.features-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 60px 20px;
+    gap: 20px;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h3 {
+    color: #228B22;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Vision and Mission Sections */
+.vision-section,
+.mission-section {
+    padding: 40px 20px;
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+.vision-section h2,
+.mission-section h2 {
+    color: #006400;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.vision-section p,
+.mission-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+    background-color: #004d00;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}

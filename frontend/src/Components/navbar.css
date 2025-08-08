@@ -1,0 +1,100 @@
+/* Base Navbar Styles */
+.navbar {
+    background-color: #004d00;
+    padding: 16px 32px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Logo */
+.navbar-logo a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Links */
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.navbar-links li a:hover {
+    background-color: #228B22;
+}
+
+/* Special style for Register button */
+.register-btn {
+    background-color: #ffffff;
+    color: #004d00 !important;
+    font-weight: bold;
+}
+
+.register-btn:hover {
+    background-color: #ccffcc;
+    color: #004d00;
+}
+
+/* Hamburger Button */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .navbar-links {
+        position: absolute;
+        top: 64px;
+        right: 0;
+        background-color: #004d00;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        gap: 16px;
+        padding: 20px 0;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}

@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify
 from app import db
 from app.models import Order, Product
-from app.utils.auth import token_required, roles_required
+from app.utilis.auth import token_required, roles_required
 
 bp = Blueprint("order", __name__, url_prefix="/api/orders")
 
